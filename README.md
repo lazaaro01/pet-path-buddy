@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# PetTracker
 
-## Project info
+## Visão Geral
 
-**URL**: https://lovable.dev/projects/8cde6889-9508-4b51-bc44-986eb0f6e441
+PetTracker é um sistema avançado para rastreamento de pets em tempo real, com mapas interativos, alertas inteligentes e histórico de trajetos.
 
-## How can I edit this code?
+## Stacks Utilizadas
 
-There are several ways of editing your application.
+- **Vite**: Bundler moderno para desenvolvimento rápido.
+- **TypeScript**: Tipagem estática para JavaScript.
+- **React**: Biblioteca para construção de interfaces.
+- **shadcn-ui**: Componentes UI modernos e acessíveis.
+- **Tailwind CSS**: Framework utilitário para estilização.
+- **React Router**: Gerenciamento de rotas.
+- **TanStack Query**: Gerenciamento de dados assíncronos.
+- **Lucide Icons**: Ícones SVG.
+- **date-fns**: Manipulação de datas.
+- **leaflet**: Mapas interativos.
+- **Radix UI**: Componentes acessíveis (usados via shadcn-ui).
+- **Sonner**: Sistema de notificações.
+- **eslint**: Linter para manter a qualidade do código.
 
-**Use Lovable**
+## Instalação e Execução
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8cde6889-9508-4b51-bc44-986eb0f6e441) and start prompting.
+### Pré-requisitos
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Node.js** (recomendado versão 18+)
+- **npm** (gerenciador de pacotes)
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Passos para rodar localmente
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 1. Clone o repositório
+git clone <https://github.com/lazaaro01/pet-path-buddy>
+cd <pet-path-buddy>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Instale as dependências
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3. Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:8080` (ou outra porta definida).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts principais
 
-**Use GitHub Codespaces**
+- `npm run dev`: Inicia o servidor de desenvolvimento com hot reload.
+- `npm run build`: Gera a versão de produção.
+- `npm run lint`: Executa o linter (ESLint).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Estrutura de Pastas
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8cde6889-9508-4b51-bc44-986eb0f6e441) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `src/`: Código-fonte principal.
+  - `components/`: Componentes React reutilizáveis.
+  - `hooks/`: Hooks customizados.
+  - `lib/`: Utilitários.
+  - `pages/`: Páginas principais.
+  - `types/`: Tipos TypeScript.
+- `public/`: Arquivos públicos (imagens, robots.txt, etc).
+---
