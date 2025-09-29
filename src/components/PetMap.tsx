@@ -3,8 +3,11 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Pet } from '@/types/pet';
 
-// Fix para ícones do Leaflet
-delete (L.Icon.Default.prototype as any)._getIconUrl;
+interface ExtendedIconDefault extends L.Icon.Default {
+  _getIconUrl?: () => string;
+}
+
+delete (L.Icon.Default.prototype as ExtendedIconDefault)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
@@ -175,7 +178,7 @@ export const PetMap: React.FC<PetMapProps> = ({ pets, selectedPet, onPetSelect }
     <div 
       ref={mapRef} 
       className="w-full h-full rounded-2xl"
-      style={{ minHeight: '400px' }}
+      style={{ minHeight: '400px', zIndex: 1 }} 
     />
   );
 };
